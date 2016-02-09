@@ -24,6 +24,18 @@ Or install it yourself as:
 
 TODO: Write usage instructions here
 
+  ##For Create Shipment
+
+    url = "Add ship delight post URl"
+
+    cust_shipment_details = "{"api_key"=>"", "transaction_id"=>"", "order_no"=>"", "consignee_first_name"=>"", "consignee_last_name"=>"", "consignee_address1"=>"", "consignee_address2"=>"", "destination_city"=>"", "destination_pincode"=>"", "state"=>"", "telephone1"=>"", "telephone2"=>"", "vendor_name"=>"", "vendor_address"=>"", "vendor_city"=>"", "pickup_pincode"=>"", "vendor_phone1"=>"", "pay_type"=>"", "item_description"=>"", "qty"=>"", "collectable_value"=>"", "product_value"=>"", "actual_weight"=>"", "volumetric_weight"=>"", "length"=>"", "breadth"=>"", "height"=>""}"
+
+    result = ShipDelightApi::ShipDelight.create_ship_delight(url, cust_shipment_details)
+
+  ##For Track Shipment 
+
+    result = ShipDelightApi::ShipDelight.track_ship_delight(awb_number)
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
