@@ -9,8 +9,8 @@ module ShipDelightApi
     	result = JSON.parse(response)
     end
 
-    def self.track_ship_delight(awb_number)
-    	url = "http://crm.shipdelight.com/index.php/api/example/trackAwb?awb=#{awb_number}&btn1=&format=json"
+    def self.track_ship_delight(url,awb_number)
+        url = "#{url}#{awb_number}"
     	response = HTTParty.get(url)
     	result = JSON.parse(response)
     end
